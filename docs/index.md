@@ -1,12 +1,31 @@
-# [Your project title]
+# SUEWS Hackathon Practice Setup
 
-Your public showcase page. Enable **GitHub Pages** (Settings → Pages → build from `main`, `/docs` folder) so this renders as a public site.
+This is a practice repository for the SUEWS Community Hackathon setup check.
 
-Tell the story:
+## Setup Status
 
-- The question you asked.
-- How you configured SUEWS via the suews-agent.
-- Your heat-hazard result and the socio-economic risk indicator.
-- Where the hazard-to-indicator bridge holds, and where it breaks.
+| Step | Status |
+| --- | --- |
+| Repository created from template | Done |
+| Task brief read | Done |
+| suews-agent installed | Done |
+| Demo SUEWS simulation run | Done |
+| GitHub Pages enabled from `/docs` | Done |
 
-> This page is judged on **Policy relevance & honest bridging** and **Presentation quality**. It must be public.
+## Smoke-Test Run
+
+The setup check used the `suews@suews` Codex plugin and the SUEWS CLI it bootstraps through `uvx`.
+
+- Case directory: `analysis/suews-agent-smoke/`
+- Config used for the run: `analysis/suews-agent-smoke/updated_sample_config.yml`
+- Output file: `analysis/suews-agent-smoke/Output/KCL1_2012_SUEWS_60.txt`
+- SUEWS/SuPy version: `2026.6.5`
+- Schema version: `2026.5`
+
+This was a Level 1 demo run using the packaged KCL/London sample data. It confirms the local toolchain can initialise, validate, run, diagnose, and summarise a SUEWS case end to end. It should not be interpreted as the hackathon city result.
+
+## Honest Caveats
+
+Validation completed with warnings only, mostly about unused zero-fraction surfaces and albedo/emissivity consistency checks in the sample setup. Post-run diagnostics found the output file and no NaNs in QH/QE/QN, but flagged an energy-balance closure warning for this demo output.
+
+The on-the-day hackathon submission still needs the released focus-city dataset, the heat-to-risk bridge function, and a proper interpretation of hazard and socio-economic risk.

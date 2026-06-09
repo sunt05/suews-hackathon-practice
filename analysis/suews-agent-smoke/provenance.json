@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-06-09T12:41:00Z",
+  "purpose": "SUEWS Community Hackathon setup smoke test",
+  "readiness": "Level 1 - demo",
+  "agent": {
+    "plugin": "suews@suews",
+    "plugin_version": "0.2.0",
+    "source": "UMEP-dev/suews-agent",
+    "execution_path": "uvx --from git+https://github.com/UMEP-dev/SUEWS.git#subdirectory=mcp suews"
+  },
+  "versions": {
+    "schema_version": "2026.5",
+    "suews_version": "2026.6.5",
+    "supy_version": "2026.6.5",
+    "suews_git_commit": "9dae7a8"
+  },
+  "commands": [
+    "suews init --template simple-urban --format json analysis/suews-agent-smoke",
+    "suews inspect --format json analysis/suews-agent-smoke/sample_config.yml",
+    "suews validate --format json analysis/suews-agent-smoke/sample_config.yml",
+    "suews run analysis/suews-agent-smoke/updated_sample_config.yml",
+    "suews diagnose --format json analysis/suews-agent-smoke",
+    "suews summarise --variables Tair,QH,QE,QN --format json analysis/suews-agent-smoke/Output"
+  ],
+  "config": "analysis/suews-agent-smoke/updated_sample_config.yml",
+  "input_forcing": "analysis/suews-agent-smoke/Kc_2012_data_60.txt",
+  "outputs": [
+    "analysis/suews-agent-smoke/Output/KCL1_2012_SUEWS_60.txt",
+    "analysis/suews-agent-smoke/Output/KCL_SUEWS_checkpoint.json"
+  ],
+  "caveats": [
+    "Packaged KCL/London sample data; not the hackathon focus city.",
+    "Validation completed with warnings only.",
+    "Diagnostics flagged mean energy-balance closure residual of 5.731.",
+    "This sidecar was added manually because the CLI run did not emit provenance.json."
+  ]
+}
