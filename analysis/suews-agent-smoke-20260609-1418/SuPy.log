@@ -1,0 +1,3 @@
+2026-06-09 14:18:29,326 - SuPy - INFO - Loading config with schema version: 2026.5
+2026-06-09 14:18:34,780 - SuPy - INFO - SuPy is validating `df_forcing`...
+2026-06-09 14:18:34,796 - SuPy - INFO - All checks for `df_forcing` passed!

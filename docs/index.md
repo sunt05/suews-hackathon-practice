@@ -16,9 +16,10 @@ This is a practice repository for the SUEWS Community Hackathon setup check.
 
 The setup check used the `suews@suews` Codex plugin and the SUEWS CLI it bootstraps through `uvx`.
 
-- Case directory: `analysis/suews-agent-smoke/`
-- Config used for the run: `analysis/suews-agent-smoke/updated_sample_config.yml`
-- Output file: `analysis/suews-agent-smoke/Output/KCL1_2012_SUEWS_60.txt`
+- Latest case directory: `analysis/suews-agent-smoke-20260609-1418/`
+- Config used for the latest run: `analysis/suews-agent-smoke-20260609-1418/updated_sample_config.yml`
+- Output file: `analysis/suews-agent-smoke-20260609-1418/Output/KCL1_2012_SUEWS_60.txt`
+- Evidence report: `analysis/suews-agent-smoke-20260609-1418/SMOKE_TEST_REPORT.md`
 - SUEWS/SuPy version: `2026.6.5`
 - Schema version: `2026.5`
 
